@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const pdfRoute = require('./src/routes/pdfmake');
 
-const port = 5000;
+const port = process.env.port || 5000;
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.sendfile('index.html');
 });
 
