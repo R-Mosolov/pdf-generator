@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.get('/', (req, res) => {
+app.use('/', (req, res) => {
     res.sendfile('index.html');
 });
 
