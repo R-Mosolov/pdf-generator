@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <img class="banner shadow" src="img/document.jpg">
+    <img class="banner shadow" src="img/document-2-tiny.jpg">
 
     <h1 class="mt-5 mb-4 container text-center">Форма создания документа</h1>
     <form class="container border rounded" method="POST" action="pdfMake\pdf">
         <div class="mt-4">
-            <label class="col-4" for="doc-number">Номер договора</label>
-            <input class="col-7" type="number" placeholder="123" id="doc-number" name="docNumber">
+            <label class="col-4" for="doc-number">Номер договора*</label>
+            <input class="col-7" type="number" placeholder="123" id="doc-number" name="docNumber" required>
         </div>
 
         <div class="mt-3">
@@ -23,8 +23,8 @@
         </div>
 
         <div class="mt-3">
-            <label class="col-4" for="doc-number">Название организации</label>
-            <input class="col-7" type="text" placeholder='ПАО "Газпром"' id="company-name" name="companyName">
+            <label class="col-4" for="doc-number">Название организации*</label>
+            <input class="col-7" type="text" placeholder='ПАО "Газпром"' id="company-name" name="companyName" required>
         </div>
         <div class="mt-3 mb-4 d-flex justify-content-center">
             <button class="btn btn-success"

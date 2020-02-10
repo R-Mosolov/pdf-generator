@@ -9,6 +9,7 @@ router.post('/pdf', (req, res) => {
     const docNumber = req.body.docNumber;
     const docDate = transformDate(req.body.docDate);
     const companyName = req.body.companyName;
+    const fileName = `doc-${Math.ceil(Math.random() * 100000)}`;
 
     var documentDefinition = {
         content: [
@@ -21,7 +22,7 @@ router.post('/pdf', (req, res) => {
         res.writeHead(200,
         {
             'Content-Type': 'application/pdf',
-            'Content-Disposition':'attachment;filename="filename.pdf"'
+            'Content-Disposition':`attachment;filename="${fileName}.pdf"`
         });
 
         const download = Buffer.from(data.toString('utf-8'), 'base64');
