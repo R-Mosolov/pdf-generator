@@ -9,7 +9,7 @@ router.post('/pdf', (req, res) => {
     const docNumber = req.body.docNumber;
     const docDate = transformDate(req.body.docDate);
     const companyName = req.body.companyName;
-    const fileName = `doc-${Math.ceil(Math.random() * 100000)}`;
+    const fileName = `doc_${docNumber}`;
 
     var documentDefinition = {
         content: [
@@ -106,8 +106,8 @@ function presentText(docNumber, docDate, companyName) {
         'Исполнитель:\t                                                            Заказчик:';
 }
 
-function transformDate() {
-    const date = new Date(Date.now());
+function transformDate(userDate) {
+    const date = new Date(userDate);
     const monthNames = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
         'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
 
