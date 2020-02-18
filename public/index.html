@@ -12,23 +12,38 @@
 
     <h1 class="mt-5 mb-4 container text-center">Форма создания документа</h1>
     <form class="container border rounded" method="POST" action="pdfMake\pdf">
-        <div class="mt-4">
-            <label class="col-4" for="doc-number">Номер договора*</label>
-            <input class="col-7" type="number" placeholder="123" id="doc-number" name="docNumber" required>
+        <div class="mt-3">
+            <label class="col-4" for="author">ФИО обращающегося*</label>
+            <input class="col-7" type="text" placeholder='Закирова Эльмира Анасовна' id="author" name="author" required>
         </div>
 
         <div class="mt-3">
-            <label class="col-4" for="doc-number">Дата создания договора</label>
-            <input class="col-7" type="date" placeholder="31.12.2020" id="doc-date" name="docDate">
+            <label class="col-4" for="object-name">ФИО объекта (в дательном падеже)*</label>
+            <input class="col-7" type="text" placeholder='Закировой Резеде Ринатовне' id="object-name" name="objectName" required>
         </div>
 
         <div class="mt-3">
-            <label class="col-4" for="doc-number">Название организации*</label>
-            <input class="col-7" type="text" placeholder='ПАО "Газпром"' id="company-name" name="companyName" required>
+            <label class="col-4" for="object-address">Адрес проживания*</label>
+            <input class="col-7" type="text" placeholder='проживающей по адресу РТ, г. Казань, ул. Фатиха Амирхана, д.59, кв.1'
+                   id="object-address" name="objectAddress" required>
         </div>
+
+        <div class="mt-3">
+            <label class="col-4" for="object-info">Информация*</label>
+            <input class="col-7" type="text" placeholder='заканчивающей в июне 2020 года ГАПОУ «Казанский медицинский колледж», по
+специальности «Сестринское дело»' id="object-info" name="objectInfo" required>
+        </div>
+
+        <div class="mt-3">
+            <label class="col-4" for="object-description">Положительная характеристика*</label>
+            <input class="col-7" type="text" placeholder='Моя дочь очень старательный и самостоятельный
+ребенок, уже 2 года после учебы подрабатывает в Приемном отделении ГАУЗ «ГКБ №7».'
+                   id="object-description" name="objectDescription" required>
+        </div>
+
         <div class="mt-3 mb-4 d-flex justify-content-center">
             <button class="btn btn-success"
-                type="submit">
+                    type="submit">
                 Создать файл PDF
             </button>
         </div>

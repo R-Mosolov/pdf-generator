@@ -1,6 +1,7 @@
 # Environment exclusions
 .idea
 .DS_Store
+node_modules
 
 # Logs
 logs
